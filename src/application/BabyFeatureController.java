@@ -34,7 +34,7 @@ public class BabyFeatureController {
     	FXMLLoader loader = new FXMLLoader();
     	VBox root = loader.load(new FileInputStream("src/application/ParentsInfo.fxml"));
     	
-    	Scene scene2 = new Scene(root,500,350);
+    	Scene scene2 = new Scene(root,600,550);
     	applicationStage.setScene(scene2);
     	
     }
