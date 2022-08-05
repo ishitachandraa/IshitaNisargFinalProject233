@@ -15,10 +15,12 @@ public class Main extends Application {
 		try {
 			FXMLLoader loader = new FXMLLoader();
 			VBox root = loader.load(new FileInputStream("src/application/MainPageView.fxml"));
+			BabyFeatureController controller = (BabyFeatureController)loader.getController();
+			controller.applicationStage = primaryStage;
 			Scene scene = new Scene(root,500,350);
 			
 			primaryStage.setScene(scene);
-			primaryStage.setTitle("Ishita's Project");
+			primaryStage.setTitle("Final Project");
 			primaryStage.show();
 		} catch(Exception e) {
 			e.printStackTrace();
