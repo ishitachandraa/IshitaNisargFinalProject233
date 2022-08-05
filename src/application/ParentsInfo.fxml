@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.text.*?>
 <?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
 <?import java.lang.*?>
@@ -10,10 +11,13 @@
    <children>
       <HBox prefHeight="100.0" prefWidth="200.0">
          <children>
-            <Label text="Enter your details!">
+            <Label text="ENTER YOUR DETAILS!">
                <HBox.margin>
-                  <Insets left="250.0" />
+                  <Insets left="20.0" />
                </HBox.margin>
+               <font>
+                  <Font name="Century Gothic Bold" size="24.0" />
+               </font>
             </Label>
          </children>
       </HBox>
@@ -24,61 +28,124 @@
                <children>
                   <Label prefHeight="35.0" prefWidth="236.0" text="Mother's Name">
                      <HBox.margin>
-                        <Insets left="165.0" />
+                        <Insets left="170.0" />
                      </HBox.margin>
+                     <font>
+                        <Font name="System Bold Italic" size="24.0" />
+                     </font>
                   </Label>
                </children>
             </HBox>
             <HBox prefHeight="77.0" prefWidth="386.0">
                <children>
-                  <Label prefHeight="35.0" prefWidth="241.0" text="Father's Name" />
+                  <Label prefHeight="35.0" prefWidth="241.0" text="Father's Name">
+                     <font>
+                        <Font name="System Bold Italic" size="24.0" />
+                     </font></Label>
                </children>
             </HBox>
          </children>
       </HBox>
       <HBox prefHeight="100.0" prefWidth="200.0">
          <children>
-            <Label prefHeight="35.0" prefWidth="151.0" text="Eye Color" />
-            <ChoiceBox prefWidth="142.0">
+            <Label prefWidth="150.0" text=" EYE COLOR" textAlignment="CENTER" textFill="#0d8de2">
                <HBox.margin>
-                  <Insets left="90.0" />
+                  <Insets left="10.0" right="20.0" />
+               </HBox.margin>
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font></Label>
+            <ChoiceBox prefWidth="150.0">
+               <HBox.margin>
+                  <Insets left="50.0" right="10.0" />
                </HBox.margin>
             </ChoiceBox>
-            <ChoiceBox>
+            <ChoiceBox prefWidth="150.0">
                <HBox.margin>
-                  <Insets right="90.0" />
+                  <Insets right="70.0" />
                </HBox.margin>
             </ChoiceBox>
          </children>
       </HBox>
       <HBox prefHeight="100.0" prefWidth="200.0">
          <children>
-            <Label text="Hair color" />
-            <ChoiceBox prefWidth="150.0" />
-            <ChoiceBox prefWidth="150.0" />
+            <Label prefWidth="150.0" text="HAIR COLOR" textAlignment="CENTER" textFill="#0d8de2">
+               <HBox.margin>
+                  <Insets left="10.0" right="20.0" />
+               </HBox.margin>
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font></Label>
+            <ChoiceBox prefWidth="150.0">
+               <HBox.margin>
+                  <Insets left="50.0" right="10.0" />
+               </HBox.margin></ChoiceBox>
+            <ChoiceBox prefWidth="150.0">
+               <HBox.margin>
+                  <Insets right="70.0" />
+               </HBox.margin></ChoiceBox>
          </children>
       </HBox>
       <HBox prefHeight="100.0" prefWidth="200.0">
          <children>
-            <Label text="Height" />
-            <TextField />
-            <TextField />
+            <Label prefWidth="150.0" text="HEIGHT" textAlignment="CENTER" textFill="#0d8de2">
+               <HBox.margin>
+                  <Insets left="10.0" right="20.0" />
+               </HBox.margin>
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font></Label>
+            <TextField prefWidth="150.0">
+               <HBox.margin>
+                  <Insets left="50.0" right="10.0" />
+               </HBox.margin></TextField>
+            <TextField prefWidth="150.0">
+               <HBox.margin>
+                  <Insets right="70.0" />
+               </HBox.margin></TextField>
          </children>
       </HBox>
       <HBox prefHeight="100.0" prefWidth="200.0">
          <children>
-            <Label text="Dimples" />
-            <ChoiceBox prefWidth="150.0" />
-            <ChoiceBox prefWidth="150.0" />
+            <Label prefWidth="150.0" text="DIMPLES" textAlignment="CENTER" textFill="#0d8de2">
+               <HBox.margin>
+                  <Insets left="10.0" right="20.0" />
+               </HBox.margin>
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font></Label>
+            <ChoiceBox prefWidth="150.0">
+               <HBox.margin>
+                  <Insets left="50.0" right="10.0" />
+               </HBox.margin></ChoiceBox>
+            <ChoiceBox prefWidth="150.0">
+               <HBox.margin>
+                  <Insets right="70.0" />
+               </HBox.margin></ChoiceBox>
          </children>
       </HBox>
       <HBox prefHeight="100.0" prefWidth="200.0">
          <children>
-            <Label text="Ear lobe" />
-            <ChoiceBox prefWidth="150.0" />
-            <ChoiceBox prefWidth="150.0" />
+            <Label prefWidth="150.0" text="EAR LOBE" textAlignment="CENTER" textFill="#0d8de2">
+               <HBox.margin>
+                  <Insets left="10.0" right="20.0" />
+               </HBox.margin>
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font></Label>
+            <ChoiceBox prefWidth="150.0">
+               <HBox.margin>
+                  <Insets left="50.0" right="10.0" />
+               </HBox.margin></ChoiceBox>
+            <ChoiceBox prefWidth="150.0">
+               <HBox.margin>
+                  <Insets right="70.0" />
+               </HBox.margin></ChoiceBox>
          </children>
       </HBox>
-      <Button mnemonicParsing="false" text="Button" />
+      <Button mnemonicParsing="false" prefHeight="20.0" prefWidth="200.0" text="Calculate">
+         <VBox.margin>
+            <Insets bottom="10.0" left="270.0" />
+         </VBox.margin></Button>
    </children>
 </VBox>
