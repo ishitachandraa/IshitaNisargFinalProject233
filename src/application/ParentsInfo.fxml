@@ -6,6 +6,7 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.collections.FXCollections?>
 
 <VBox prefHeight="595.0" prefWidth="1124.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.BabyCalController">
    <children>
@@ -56,11 +57,29 @@
                   <Font name="System Bold" size="20.0" />
                </font></Label>
             <ChoiceBox fx:id="eyeColorMotherChoiceBox" prefWidth="150.0">
+            	<items>
+            		<FXCollections fx:factory = "observableArrayList">
+            			<String fx:value = "brown" />
+            			<String fx:value = "black" />
+            			<String fx:value = "blue" />
+            			<String fx:value = "Hazel" />
+            			<String fx:value = "Green" />
+            	</FXCollections>
+            </items>
                <HBox.margin>
                   <Insets left="50.0" right="10.0" />
                </HBox.margin>
             </ChoiceBox>
             <ChoiceBox fx:id="eyeColorFatherChoiceBox" prefWidth="150.0">
+            <items>
+            		<FXCollections fx:factory = "observableArrayList">
+            			<String fx:value = "brown" />
+            			<String fx:value = "black" />
+            			<String fx:value = "blue" />
+            			<String fx:value = "Hazel" />
+            			<String fx:value = "Green" />
+            	</FXCollections>
+            </items>
                <HBox.margin>
                   <Insets right="70.0" />
                </HBox.margin>
@@ -77,10 +96,28 @@
                   <Font name="System Bold" size="20.0" />
                </font></Label>
             <ChoiceBox fx:id="motherHairColorChoiceBox" prefWidth="150.0">
+            <items>
+            		<FXCollections fx:factory = "observableArrayList">
+            			<String fx:value = "brown" />
+            			<String fx:value = "black" />
+            			<String fx:value = "blonde" />
+            			<String fx:value = "red" />
+            			<String fx:value = "Strawberry" />
+            	</FXCollections>
+            </items>
                <HBox.margin>
                   <Insets left="50.0" right="10.0" />
                </HBox.margin></ChoiceBox>
             <ChoiceBox fx:id="fatherHairColorChoiceBox" prefWidth="150.0">
+             <items>
+            		<FXCollections fx:factory = "observableArrayList">
+            			<String fx:value = "brown" />
+            			<String fx:value = "black" />
+            			<String fx:value = "blonde" />
+            			<String fx:value = "red" />
+            			<String fx:value = "Strawberry" />
+            	</FXCollections>
+            </items>
                <HBox.margin>
                   <Insets right="70.0" />
                </HBox.margin></ChoiceBox>
@@ -115,10 +152,22 @@
                   <Font name="System Bold" size="20.0" />
                </font></Label>
             <ChoiceBox fx:id="motherDimplesChoiceBox" prefWidth="150.0">
+             <items>
+            		<FXCollections fx:factory = "observableArrayList">
+            			<String fx:value = "Dimples" />
+            			<String fx:value = "No dimples" />
+            	</FXCollections>
+            </items>
                <HBox.margin>
                   <Insets left="50.0" right="10.0" />
                </HBox.margin></ChoiceBox>
             <ChoiceBox fx:id="fatherDimplesChoiceBox" prefWidth="150.0">
+             <items>
+            		<FXCollections fx:factory = "observableArrayList">
+            			<String fx:value = "Dimples" />
+            			<String fx:value = "No dimples" />
+            	</FXCollections>
+            </items>
                <HBox.margin>
                   <Insets right="70.0" />
                </HBox.margin></ChoiceBox>
@@ -134,10 +183,22 @@
                   <Font name="System Bold" size="20.0" />
                </font></Label>
             <ChoiceBox fx:id="motherEarLobeChoiceBox" prefWidth="150.0">
+             <items>
+            		<FXCollections fx:factory = "observableArrayList">
+            			<String fx:value = "Attached earlobe" />
+            			<String fx:value = "detached earlobe" />
+            	</FXCollections>
+            </items>
                <HBox.margin>
                   <Insets left="50.0" right="10.0" />
                </HBox.margin></ChoiceBox>
             <ChoiceBox fx:id="fatherEarLobeChoiceBox" prefWidth="150.0">
+             <items>
+            		<FXCollections fx:factory = "observableArrayList">
+            			<String fx:value = "Attached earlobe" />
+            			<String fx:value = "detached earlobe" />
+            	</FXCollections>
+            </items>
                <HBox.margin>
                   <Insets right="70.0" />
                </HBox.margin></ChoiceBox>

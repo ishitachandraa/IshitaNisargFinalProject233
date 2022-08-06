@@ -11,9 +11,9 @@
    <children>
       <HBox prefHeight="100.0" prefWidth="200.0">
          <children>
-            <Label text="Baby Features">
+            <Label text="Baby Features" textFill="#1ec9be">
                <font>
-                  <Font size="22.0" />
+                  <Font name="System Bold Italic" size="22.0" />
                </font>
                <HBox.margin>
                   <Insets left="150.0" />
@@ -23,10 +23,13 @@
       </HBox>
       <HBox prefHeight="100.0" prefWidth="200.0">
          <children>
-            <Label text="Eye Color">
+            <Label text="Eye Color" textFill="#2a68da">
                <HBox.margin>
                   <Insets left="10.0" />
                </HBox.margin>
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
             </Label>
             <Label text="Label">
                <HBox.margin>
@@ -37,10 +40,13 @@
       </HBox>
       <HBox prefHeight="100.0" prefWidth="200.0">
          <children>
-            <Label text="Hair Color">
+            <Label text="Hair Color" textFill="#2a68da">
                <HBox.margin>
                   <Insets left="10.0" />
                </HBox.margin>
+               <font>
+                  <Font name="System Bold Italic" size="15.0" />
+               </font>
             </Label>
             <Label text="Label">
                <HBox.margin>
@@ -51,10 +57,13 @@
       </HBox>
       <HBox prefHeight="100.0" prefWidth="200.0">
          <children>
-            <Label text="Height">
+            <Label text="Height" textFill="#2a68da">
                <HBox.margin>
                   <Insets left="10.0" />
                </HBox.margin>
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
             </Label>
             <Label text="Label">
                <HBox.margin>
@@ -65,10 +74,13 @@
       </HBox>
       <HBox prefHeight="100.0" prefWidth="200.0">
          <children>
-            <Label text="Dimples">
+            <Label text="Dimples" textFill="#2a68da">
                <HBox.margin>
                   <Insets left="10.0" />
                </HBox.margin>
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
             </Label>
             <Label text="Label">
                <HBox.margin>
@@ -79,10 +91,13 @@
       </HBox>
       <HBox prefHeight="100.0" prefWidth="200.0">
          <children>
-            <Label text="Ear Lobe">
+            <Label text="Ear Lobe" textFill="#2a68da">
                <HBox.margin>
                   <Insets left="10.0" />
                </HBox.margin>
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
             </Label>
             <Label text="Label">
                <HBox.margin>
