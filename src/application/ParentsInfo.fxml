@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.VBox?>
 
-<VBox prefHeight="595.0" prefWidth="1124.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<VBox prefHeight="595.0" prefWidth="1124.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.BabyCalController">
    <children>
       <HBox prefHeight="100.0" prefWidth="200.0">
          <children>
@@ -55,12 +55,12 @@
                <font>
                   <Font name="System Bold" size="20.0" />
                </font></Label>
-            <ChoiceBox prefWidth="150.0">
+            <ChoiceBox fx:id="eyeColorMotherChoiceBox" prefWidth="150.0">
                <HBox.margin>
                   <Insets left="50.0" right="10.0" />
                </HBox.margin>
             </ChoiceBox>
-            <ChoiceBox prefWidth="150.0">
+            <ChoiceBox fx:id="eyeColorFatherChoiceBox" prefWidth="150.0">
                <HBox.margin>
                   <Insets right="70.0" />
                </HBox.margin>
@@ -76,11 +76,11 @@
                <font>
                   <Font name="System Bold" size="20.0" />
                </font></Label>
-            <ChoiceBox prefWidth="150.0">
+            <ChoiceBox fx:id="motherHairColorChoiceBox" prefWidth="150.0">
                <HBox.margin>
                   <Insets left="50.0" right="10.0" />
                </HBox.margin></ChoiceBox>
-            <ChoiceBox prefWidth="150.0">
+            <ChoiceBox fx:id="fatherHairColorChoiceBox" prefWidth="150.0">
                <HBox.margin>
                   <Insets right="70.0" />
                </HBox.margin></ChoiceBox>
@@ -95,11 +95,11 @@
                <font>
                   <Font name="System Bold" size="20.0" />
                </font></Label>
-            <TextField prefWidth="150.0">
+            <TextField fx:id="motherHeightTextField" prefWidth="150.0">
                <HBox.margin>
                   <Insets left="50.0" right="10.0" />
                </HBox.margin></TextField>
-            <TextField prefWidth="150.0">
+            <TextField fx:id="fatherHeightTextField" prefWidth="150.0">
                <HBox.margin>
                   <Insets right="70.0" />
                </HBox.margin></TextField>
@@ -114,11 +114,11 @@
                <font>
                   <Font name="System Bold" size="20.0" />
                </font></Label>
-            <ChoiceBox prefWidth="150.0">
+            <ChoiceBox fx:id="motherDimplesChoiceBox" prefWidth="150.0">
                <HBox.margin>
                   <Insets left="50.0" right="10.0" />
                </HBox.margin></ChoiceBox>
-            <ChoiceBox prefWidth="150.0">
+            <ChoiceBox fx:id="fatherDimplesChoiceBox" prefWidth="150.0">
                <HBox.margin>
                   <Insets right="70.0" />
                </HBox.margin></ChoiceBox>
@@ -133,17 +133,17 @@
                <font>
                   <Font name="System Bold" size="20.0" />
                </font></Label>
-            <ChoiceBox prefWidth="150.0">
+            <ChoiceBox fx:id="motherEarLobeChoiceBox" prefWidth="150.0">
                <HBox.margin>
                   <Insets left="50.0" right="10.0" />
                </HBox.margin></ChoiceBox>
-            <ChoiceBox prefWidth="150.0">
+            <ChoiceBox fx:id="fatherEarLobeChoiceBox" prefWidth="150.0">
                <HBox.margin>
                   <Insets right="70.0" />
                </HBox.margin></ChoiceBox>
          </children>
       </HBox>
-      <Button mnemonicParsing="false" prefHeight="20.0" prefWidth="200.0" text="Calculate">
+      <Button fx:id="finalCalculate" mnemonicParsing="false" onAction="#calculateBaby" prefHeight="20.0" prefWidth="200.0" text="Calculate">
          <VBox.margin>
             <Insets bottom="10.0" left="270.0" />
          </VBox.margin></Button>
