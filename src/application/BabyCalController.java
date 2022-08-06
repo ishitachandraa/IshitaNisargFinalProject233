@@ -1,11 +1,13 @@
 package application;
 
 import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
@@ -50,16 +52,16 @@ public class BabyCalController {
     private ChoiceBox<String> eyeColorMotherChoiceBox;
 
     
+    
+    // got this code from https://youtu.be/qnwBZveyUtA
     @FXML
-    void calculateBaby(ActionEvent event)throws IOException {
-    	String motherHeight = motherHeightTextField.getText();
-    	String fatherHeight = fatherHeightTextField.getText();
+    void calculateBaby(ActionEvent event)throws Exception {
     	
-    	FXMLLoader loader = new FXMLLoader();
-    	VBox root = loader.load(new FileInputStream("src/application/BabyFeatures.fxml"));
     	
-    	Scene any = new Scene(root,600,550);
-    	applicationStage.setScene(any);
+    	VBox root = FXMLLoader.load( getClass().getResource("BabyFeatures.fxml"));
+    	Stage window = (Stage) finalCalculate.getScene().getWindow();
+    	window.setScene(new Scene(root, 300, 300));
+        
     }
 
 }
