@@ -29,25 +29,25 @@ public class BabyCalController {
     private Button finalCalculate;
 
     @FXML
-    private ChoiceBox<?> eyeColorFatherChoiceBox;
+    private ChoiceBox<String> eyeColorFatherChoiceBox;
 
     @FXML
-    private ChoiceBox<?> fatherEarLobeChoiceBox;
+    private ChoiceBox<String> fatherEarLobeChoiceBox;
 
     @FXML
-    private ChoiceBox<?> fatherDimplesChoiceBox;
+    private ChoiceBox<String> fatherDimplesChoiceBox;
 
     @FXML
-    private ChoiceBox<?> motherDimplesChoiceBox;
+    private ChoiceBox<String> motherDimplesChoiceBox;
 
     @FXML
-    private ChoiceBox<?> fatherHairColorChoiceBox;
+    private ChoiceBox<String> fatherHairColorChoiceBox;
 
     @FXML
     private TextField fatherHeightTextField;
 
     @FXML
-    private ChoiceBox<?> eyeColorMotherChoiceBox;
+    private ChoiceBox<String> eyeColorMotherChoiceBox;
 
     
     @FXML
