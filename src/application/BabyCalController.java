@@ -1,13 +1,10 @@
 package application;
 
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.IOException;
+
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
@@ -62,6 +59,24 @@ public class BabyCalController {
     	Stage window = (Stage) finalCalculate.getScene().getWindow();
     	window.setScene(new Scene(root, 300, 300));
         
+    	
     }
+    
+    String calculateHair(String mHair, String fHair) {
+    	
+      HairColor babyHair = new HairColor(mHair, fHair);
+      String hairResult = babyHair.predictHair();
+      return hairResult;
+    }
+    
+    String calculateEye(String mEye, String fEye) {
+    	
+        EyeColor babyEye = new EyeColor(mEye, fEye);
+        String eyeResult = babyEye.predictEye();
+        return eyeResult;
+      }
+    
+    
 
+    
 }
