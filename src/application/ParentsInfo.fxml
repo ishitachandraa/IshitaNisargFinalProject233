@@ -99,10 +99,10 @@
             <items>
             		<FXCollections fx:factory = "observableArrayList">
             			<String fx:value = "brown" />
-            			<String fx:value = "black" />
+            			
             			<String fx:value = "blonde" />
             			<String fx:value = "red" />
-            			<String fx:value = "Strawberry" />
+            			
             	</FXCollections>
             </items>
                <HBox.margin>
@@ -112,10 +112,10 @@
              <items>
             		<FXCollections fx:factory = "observableArrayList">
             			<String fx:value = "brown" />
-            			<String fx:value = "black" />
+            			
             			<String fx:value = "blonde" />
             			<String fx:value = "red" />
-            			<String fx:value = "Strawberry" />
+            			
             	</FXCollections>
             </items>
                <HBox.margin>
