@@ -151,7 +151,7 @@
              <items>
             		<FXCollections fx:factory = "observableArrayList">
             			<String fx:value = "Dimples" />
-            			<String fx:value = "No dimples" />
+            			<String fx:value = "No Dimples" />
             	</FXCollections>
             </items>
                <HBox.margin>
@@ -161,7 +161,7 @@
              <items>
             		<FXCollections fx:factory = "observableArrayList">
             			<String fx:value = "Dimples" />
-            			<String fx:value = "No dimples" />
+            			<String fx:value = "No Dimples" />
             	</FXCollections>
             </items>
                <HBox.margin>
@@ -181,8 +181,8 @@
             <ChoiceBox fx:id="motherEarLobeChoiceBox" prefWidth="150.0">
              <items>
             		<FXCollections fx:factory = "observableArrayList">
-            			<String fx:value = "Attached earlobe" />
-            			<String fx:value = "dettached earlobe" />
+            			<String fx:value = "Attached Earlobe" />
+            			<String fx:value = "Dettached Earlobe" />
             	</FXCollections>
             </items>
                <HBox.margin>
@@ -191,8 +191,8 @@
             <ChoiceBox fx:id="fatherEarLobeChoiceBox" prefWidth="150.0">
              <items>
             		<FXCollections fx:factory = "observableArrayList">
-            			<String fx:value = "Attached earlobe" />
-            			<String fx:value = "dettached earlobe" />
+            			<String fx:value = "Attached Earlobe" />
+            			<String fx:value = "Dettached Earlobe" />
             	</FXCollections>
             </items>
                <HBox.margin>

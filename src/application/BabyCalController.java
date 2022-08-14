@@ -68,28 +68,22 @@ public class BabyCalController {
     	String motherHair = motherHairColorChoiceBox.getValue().toString();
     	String fatherHair = fatherHairColorChoiceBox.getValue().toString();
     	String babyHair = calculateHair(motherHair, fatherHair);
-    	System.out.println(babyHair);
     	
     	//EyeColor
     	String motherEye = eyeColorMotherChoiceBox.getValue().toString();
     	String fatherEye = eyeColorFatherChoiceBox.getValue().toString();
     	String babyEye = calculateEye(motherEye, fatherEye);
-    	System.out.println(babyEye);
     	
     	//EarLobe
     	String motherLobe = motherEarLobeChoiceBox.getValue().toString();
     	String fatherLobe = fatherEarLobeChoiceBox.getValue().toString();
     	String babyLobe = calculateEarLobe(motherLobe, fatherLobe);
-    	System.out.println(babyLobe);
     	
     	//Dimples
     	String motherDimples = motherDimplesChoiceBox.getValue().toString();
     	String fatherDimples = fatherDimplesChoiceBox.getValue().toString();
-    	String babyDim = calculateEarLobe(motherDimples, fatherDimples);
-    	System.out.println(babyDim);
+    	String babyDim = calculateDimples(motherDimples, fatherDimples);
     	
-    	
- 
     
     }
     
