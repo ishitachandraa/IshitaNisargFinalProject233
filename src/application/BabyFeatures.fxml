@@ -7,18 +7,11 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.VBox?>
 
-<VBox prefHeight="368.0" prefWidth="442.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<VBox prefHeight="368.0" prefWidth="442.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.FinalResultsController">
    <children>
       <HBox prefHeight="100.0" prefWidth="200.0">
          <children>
-            <Label text="Baby Features" textFill="#1ec9be">
-               <font>
-                  <Font name="System Bold Italic" size="22.0" />
-               </font>
-               <HBox.margin>
-                  <Insets left="150.0" />
-               </HBox.margin>
-            </Label>
+            <Button fx:id="readyButton" mnemonicParsing="false" onAction="#showResults" text="Button" />
          </children>
       </HBox>
       <HBox prefHeight="100.0" prefWidth="200.0">
@@ -31,7 +24,7 @@
                   <Font name="System Bold" size="15.0" />
                </font>
             </Label>
-            <Label text="Label">
+            <Label fx:id="eyeColorResultLabel" text="Label">
                <HBox.margin>
                   <Insets left="10.0" />
                </HBox.margin>
@@ -48,7 +41,7 @@
                   <Font name="System Bold Italic" size="15.0" />
                </font>
             </Label>
-            <Label text="Label">
+            <Label fx:id="hairColorResultLabel" text="Label">
                <HBox.margin>
                   <Insets left="10.0" />
                </HBox.margin>
@@ -65,7 +58,7 @@
                   <Font name="System Bold" size="15.0" />
                </font>
             </Label>
-            <Label text="Label">
+            <Label fx:id="heightResultLabel" text="Label">
                <HBox.margin>
                   <Insets left="10.0" />
                </HBox.margin>
@@ -82,7 +75,7 @@
                   <Font name="System Bold" size="15.0" />
                </font>
             </Label>
-            <Label text="Label">
+            <Label fx:id="dimplesResultLabel" text="Label">
                <HBox.margin>
                   <Insets left="10.0" />
                </HBox.margin>
@@ -99,7 +92,7 @@
                   <Font name="System Bold" size="15.0" />
                </font>
             </Label>
-            <Label text="Label">
+            <Label fx:id="earLobeLabel" text="Label">
                <HBox.margin>
                   <Insets left="10.0" />
                </HBox.margin>
