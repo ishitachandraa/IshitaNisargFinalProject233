@@ -6,16 +6,17 @@ public class Dimples {
 	Boolean fDim=false;
 	
 	Dimples(String motherDimples, String fatherDimples){
-		if(motherDimples=="Dimples") {
+		if(motherDimples.equals("Dimples")) {
 			mDim=true;
 		}
-		if(fatherDimples=="Dimples") {
+		if(fatherDimples.equals("Dimples")) {
 			fDim=true;
 		}
 	}
 	
-	String predictDimplese() {
+	String predictDimples() {
 		String bDim = "";
+		
 		if (mDim || fDim) {
 			bDim="63% Dimples";
 			if(mDim && fDim) {
