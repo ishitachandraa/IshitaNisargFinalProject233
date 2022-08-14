@@ -13,27 +13,26 @@ public class HairColor {
 	        	
 	         
 	         String predictHair() {
-	        	String bHair = "";
+	        	String bHair = "nothing";
 	        	
-	        	if(mHair=="brown"|| fHair == "brown") {
+	        	if (mHair.equals("brown") || fHair.equals("brown")) {
 	        		bHair = "brown";
-	        	}
-	        	else {
-	        		if (mHair=="blonde" || fHair =="blonde") {
+	        	}else {
+	        		if(mHair.equals("blonde")|| fHair.equals("blonde")) {
 	        			bHair = "blonde";
 	        		}
 	        		else {
 	        			bHair = "red";
 	        		}
 	        	}
+	        	
+	        	
 	
 	        	
 	        	return bHair;
 }
 	         
-	         public  void main(String[] args) {
-	        	 System.out.println("hello");
-	         }	         }
+	         	         }
 
 
 

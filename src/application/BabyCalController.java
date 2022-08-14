@@ -58,8 +58,15 @@ public class BabyCalController {
     	VBox root = FXMLLoader.load( getClass().getResource("BabyFeatures.fxml"));
     	Stage window = (Stage) finalCalculate.getScene().getWindow();
     	window.setScene(new Scene(root, 300, 300));
-        
+        displayHairResults();
     	
+    }
+    
+    void displayHairResults(){
+    	String motherHair = motherHairColorChoiceBox.getValue().toString();
+    	String fatherHair = fatherHairColorChoiceBox.getValue().toString();
+    	String babyHair = calculateHair(motherHair, fatherHair);
+    	System.out.println(babyHair);
     }
     
     String calculateHair(String mHair, String fHair) {
