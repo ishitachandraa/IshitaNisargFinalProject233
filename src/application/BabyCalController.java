@@ -62,29 +62,54 @@ public class BabyCalController {
     	
     }
     
+   static String  finalBabyHair = "";
+   static String  finalBabyEye = "";
+   static String  finalBabyLobe = "";
+   static String  finalBabyDimples = "";
+    
     void displayResults(){
     	
     	//HairColor
     	String motherHair = motherHairColorChoiceBox.getValue().toString();
     	String fatherHair = fatherHairColorChoiceBox.getValue().toString();
     	String babyHair = calculateHair(motherHair, fatherHair);
+    	finalBabyHair = babyHair;
     	
     	//EyeColor
     	String motherEye = eyeColorMotherChoiceBox.getValue().toString();
     	String fatherEye = eyeColorFatherChoiceBox.getValue().toString();
     	String babyEye = calculateEye(motherEye, fatherEye);
+    	finalBabyEye = babyEye;
     	
     	//EarLobe
     	String motherLobe = motherEarLobeChoiceBox.getValue().toString();
     	String fatherLobe = fatherEarLobeChoiceBox.getValue().toString();
     	String babyLobe = calculateEarLobe(motherLobe, fatherLobe);
+    	finalBabyLobe = babyLobe;
     	
     	//Dimples
     	String motherDimples = motherDimplesChoiceBox.getValue().toString();
     	String fatherDimples = fatherDimplesChoiceBox.getValue().toString();
     	String babyDim = calculateDimples(motherDimples, fatherDimples);
+    	finalBabyDimples = babyDim;
     	
     
+    }
+    
+    static String GetBabyHair() {
+    	return finalBabyHair;
+    }
+    
+    static String GetBabyEye() {
+    	return finalBabyEye;
+    }
+    
+    static String GetBabyLobe() {
+    	return finalBabyLobe;
+    }
+    
+    static String GetBabyDimples() {
+    	return finalBabyDimples;
     }
     
     String calculateHair(String mHair, String fHair) {
