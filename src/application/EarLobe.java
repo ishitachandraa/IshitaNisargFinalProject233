@@ -4,19 +4,20 @@ public class EarLobe {
 
 	// if lobe attached then true
 	Boolean mLobe=false;
-	Boolean fLobe=false;
+	Boolean fLobe=true;
 	
 	EarLobe(String motherLobe, String fatherLobe){
-		if(motherLobe=="Attached Earlobe") {
+		if(motherLobe.equals("Attached Earlobe")) {
 			mLobe=true;
 		}
-		if(fatherLobe=="Attached Earlobe") {
+		if(fatherLobe.equals("Attached Earlobe")) {
 			fLobe=true;
 		}
 	}
 		
 		String predictEarlobe() {
 			String bLobe = "";
+			
 			if (mLobe && fLobe) {
 				bLobe = "Attached Earlobes";	
 			}

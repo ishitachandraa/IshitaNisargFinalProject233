@@ -60,9 +60,7 @@
             	<items>
             		<FXCollections fx:factory = "observableArrayList">
             			<String fx:value = "brown" />
-            			<String fx:value = "black" />
             			<String fx:value = "blue" />
-            			<String fx:value = "Hazel" />
             			<String fx:value = "Green" />
             	</FXCollections>
             </items>
@@ -74,9 +72,7 @@
             <items>
             		<FXCollections fx:factory = "observableArrayList">
             			<String fx:value = "brown" />
-            			<String fx:value = "black" />
             			<String fx:value = "blue" />
-            			<String fx:value = "Hazel" />
             			<String fx:value = "Green" />
             	</FXCollections>
             </items>
@@ -186,7 +182,7 @@
              <items>
             		<FXCollections fx:factory = "observableArrayList">
             			<String fx:value = "Attached earlobe" />
-            			<String fx:value = "detached earlobe" />
+            			<String fx:value = "dettached earlobe" />
             	</FXCollections>
             </items>
                <HBox.margin>
@@ -196,7 +192,7 @@
              <items>
             		<FXCollections fx:factory = "observableArrayList">
             			<String fx:value = "Attached earlobe" />
-            			<String fx:value = "detached earlobe" />
+            			<String fx:value = "dettached earlobe" />
             	</FXCollections>
             </items>
                <HBox.margin>

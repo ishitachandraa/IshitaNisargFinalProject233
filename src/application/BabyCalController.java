@@ -58,15 +58,39 @@ public class BabyCalController {
     	VBox root = FXMLLoader.load( getClass().getResource("BabyFeatures.fxml"));
     	Stage window = (Stage) finalCalculate.getScene().getWindow();
     	window.setScene(new Scene(root, 300, 300));
-        displayHairResults();
+        displayResults();
     	
     }
     
-    void displayHairResults(){
+    void displayResults(){
+    	
+    	//HairColor
     	String motherHair = motherHairColorChoiceBox.getValue().toString();
     	String fatherHair = fatherHairColorChoiceBox.getValue().toString();
     	String babyHair = calculateHair(motherHair, fatherHair);
     	System.out.println(babyHair);
+    	
+    	//EyeColor
+    	String motherEye = eyeColorMotherChoiceBox.getValue().toString();
+    	String fatherEye = eyeColorFatherChoiceBox.getValue().toString();
+    	String babyEye = calculateEye(motherEye, fatherEye);
+    	System.out.println(babyEye);
+    	
+    	//EarLobe
+    	String motherLobe = motherEarLobeChoiceBox.getValue().toString();
+    	String fatherLobe = fatherEarLobeChoiceBox.getValue().toString();
+    	String babyLobe = calculateEarLobe(motherLobe, fatherLobe);
+    	System.out.println(babyLobe);
+    	
+    	//Dimples
+    	String motherDimples = motherDimplesChoiceBox.getValue().toString();
+    	String fatherDimples = fatherDimplesChoiceBox.getValue().toString();
+    	String babyDim = calculateEarLobe(motherDimples, fatherDimples);
+    	System.out.println(babyDim);
+    	
+    	
+ 
+    
     }
     
     String calculateHair(String mHair, String fHair) {
@@ -83,7 +107,18 @@ public class BabyCalController {
         return eyeResult;
       }
     
+    String calculateEarLobe(String mLobe, String fLobe) {
+    	
+    	EarLobe babyLobe = new EarLobe(mLobe, fLobe);
+    	String lobeResult = babyLobe.predictEarlobe();
+    	return lobeResult;
+    }
     
-
+   String calculateDimples(String mDim, String fDim) {
+	   
+	   Dimples babyDim = new Dimples(mDim, fDim);
+	   String dimResult = babyDim.predictDimples();
+	   return dimResult;
+   }
     
 }
