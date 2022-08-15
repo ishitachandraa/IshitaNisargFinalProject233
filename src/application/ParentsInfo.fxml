@@ -11,32 +11,58 @@
 
 <VBox prefHeight="595.0" prefWidth="1124.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.BabyCalController">
    <children>
+      <HBox prefHeight="87.0" prefWidth="1124.0">
+         <children>
+            <Label text="Information regarding eyes, hair, height, dimples and ears would" textFill="#ea41af">
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+               <font>
+                  <Font name="Bodoni MT Italic" size="20.0" />
+               </font>
+               <HBox.margin>
+                  <Insets top="10.0" />
+               </HBox.margin></Label>
+         </children>
+      </HBox>
       <HBox prefHeight="100.0" prefWidth="200.0">
          <children>
-            <Label text="Information regarding eye color, hair color, height, dimples and ear lobe structure would be required. Click on 'continue' else so back to home screen to try later!">
+            <Label text="be required. Click on 'Continue' . Else, you can go back to home." textFill="#ea41af">
                <HBox.margin>
-                  <Insets left="20.0" />
+                  <Insets left="10.0" />
                </HBox.margin>
                <font>
-                  <Font name="Century Gothic Bold" size="24.0" />
+                  <Font name="Bodoni MT" size="20.0" />
                </font>
             </Label>
          </children>
       </HBox>
       <HBox prefHeight="100.0" prefWidth="200.0">
          <children>
-            <Button fx:id="continueButton" mnemonicParsing="false" onAction="#addParentInformation" text="Continue" />
-            <Button fx:id="goBackButton" mnemonicParsing="false" onAction="#goToHomeScreen" text="Go Back" />
+            <Button fx:id="continueButton" mnemonicParsing="false" onAction="#addParentInformation" prefHeight="93.0" prefWidth="157.0" text="Continue" textFill="#264ff2">
+               <HBox.margin>
+                  <Insets left="100.0" />
+               </HBox.margin>
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font></Button>
+            <Button fx:id="goBackButton" mnemonicParsing="false" onAction="#goToHomeScreen" prefHeight="115.0" prefWidth="153.0" text="Go Back" textFill="#3e5ecf">
+               <HBox.margin>
+                  <Insets left="100.0" />
+               </HBox.margin>
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font></Button>
          </children>
       </HBox>
-      <HBox fx:id="hBox1" prefHeight="100.0" prefWidth="200.0" visible = "false">
+      <HBox fx:id="hBox1" prefHeight="100.0" prefWidth="200.0" visible="false">
          <children>
             <Label text="                      " />
             <HBox prefHeight="77.0" prefWidth="550.0">
                <children>
-                  <Label fx:id="motherNameLabel" prefHeight="35.0" prefWidth="236.0" text="Mother's Name">
+                  <Label fx:id="motherNameLabel" prefHeight="35.0" prefWidth="236.0" text="Mother's Name" textAlignment="CENTER">
                      <HBox.margin>
-                        <Insets left="170.0" />
+                        <Insets left="187.0" />
                      </HBox.margin>
                      <font>
                         <Font name="System Bold Italic" size="24.0" />
@@ -46,15 +72,18 @@
             </HBox>
             <HBox prefHeight="77.0" prefWidth="386.0">
                <children>
-                  <Label fx:id="fatherNameLabel" prefHeight="35.0" prefWidth="241.0" text="Father's Name">
+                  <Label fx:id="fatherNameLabel" prefHeight="35.0" prefWidth="241.0" text="Father's Name" textAlignment="CENTER">
                      <font>
                         <Font name="System Bold Italic" size="24.0" />
-                     </font></Label>
+                     </font>
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin></Label>
                </children>
             </HBox>
          </children>
       </HBox>
-      <HBox fx:id="hBox2" prefHeight="100.0" prefWidth="200.0" visible = "false">
+      <HBox fx:id="hBox2" prefHeight="100.0" prefWidth="200.0" visible="false">
          <children>
             <Label prefWidth="150.0" text=" EYE COLOR" textAlignment="CENTER" textFill="#0d8de2">
                <HBox.margin>
@@ -128,7 +157,7 @@
       </HBox>
       <HBox fx:id="hBox4" prefHeight="100.0" prefWidth="200.0" visible="false">
          <children>
-            <Label prefWidth="150.0" text="HEIGHT" textAlignment="CENTER" textFill="#0d8de2">
+            <Label prefWidth="150.0" text="HEIGHT (cm)" textAlignment="CENTER" textFill="#0d8de2">
                <HBox.margin>
                   <Insets left="10.0" right="20.0" />
                </HBox.margin>
@@ -209,7 +238,13 @@
       </HBox>
       <HBox fx:id="hBox7" prefHeight="100.0" prefWidth="200.0" visible="false">
          <children>
-            <Button fx:id="finalCalculate" mnemonicParsing="false" onAction="#calculateBaby" prefHeight="20.0" prefWidth="200.0" text="Calculate" />
+            <Button fx:id="finalCalculate" mnemonicParsing="false" onAction="#calculateBaby" prefHeight="49.0" prefWidth="232.0" text="Calculate" textFill="#4e5cf2">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+               <HBox.margin>
+                  <Insets bottom="10.0" left="200.0" />
+               </HBox.margin></Button>
          </children>
       </HBox>
    </children>
