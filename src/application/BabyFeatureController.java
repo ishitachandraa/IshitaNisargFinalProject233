@@ -16,19 +16,29 @@ public class BabyFeatureController {
 	Stage applicationStage;
 
     @FXML
-    private TextField fatherNameTextField;
+    private static TextField fatherNameTextField;
 
     @FXML
-    private TextField motherNameTextField;
+    private static TextField motherNameTextField;
 
     @FXML
     private Button addInfoButton;
 
    
+    static String motherName = "";
+    static String fatherName = "";
+    
+     static void setNames() {
+    String mName = motherNameTextField.getText();
+	String fName = fatherNameTextField.getText();
+	motherName = mName;
+	fatherName = fName;
+	BabyCalController.fNameLabel.setText("hi");
+    }
+    
     @FXML
     void addInfo(ActionEvent event)throws IOException {
-    	String motherName = motherNameTextField.getText();
-    	String fatherName = fatherNameTextField.getText();
+    	
     	
     	FXMLLoader loader = new FXMLLoader();
     	VBox root = loader.load(new FileInputStream("src/application/ParentsInfo.fxml"));
@@ -36,10 +46,19 @@ public class BabyFeatureController {
     	Scene scene2 = new Scene(root,600,550);
     	applicationStage.setScene(scene2);
     	
+    	setNames();
+    	
     	
     	
     }
 
+  static String getMotherName(){
+	  return motherName;
+	  
+  }
   
+  static String getFatherName() {
+	  return fatherName;
+  }
 
 }

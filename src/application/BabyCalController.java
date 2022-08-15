@@ -2,12 +2,15 @@ package application;
 
 
 
+import java.io.IOException;
+
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
@@ -26,6 +29,11 @@ public class BabyCalController {
 
     @FXML
     private Button finalCalculate;
+    
+    @FXML
+    private Button haveInfoButton;
+    
+    
 
     @FXML
     private ChoiceBox<String> eyeColorFatherChoiceBox;
@@ -48,7 +56,14 @@ public class BabyCalController {
     @FXML
     private ChoiceBox<String> eyeColorMotherChoiceBox;
 
-    
+   @FXML
+   public static  Label mNameLabel;
+   
+   @FXML
+   public static  Label fNameLabel;
+   
+  
+  
     
     // got this code from https://youtu.be/qnwBZveyUtA
     @FXML
@@ -61,6 +76,11 @@ public class BabyCalController {
         displayResults();
     	
     }
+    
+   
+    	
+    	
+    
     
    static String  finalBabyHair = "";
    static String  finalBabyEye = "";
