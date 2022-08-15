@@ -9,15 +9,14 @@ public class Height {
 		mHeight = motherHeight;
 		fHeight = fatherHeight;
 	}
-	float predictHeight() {
-		float bHeight = 0;
+	String predictHeight() {
+		float bHeight = 0.0f;
 		float childHeight = (mHeight + fHeight)/2;
 		bHeight = childHeight;
-		System.out.println(bHeight);
+        String babyHeight = String.valueOf(bHeight);		
 		
 		
-		
-		return bHeight;
+		return babyHeight;
 		
 	}
 		

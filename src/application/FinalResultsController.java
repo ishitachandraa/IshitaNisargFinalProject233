@@ -21,6 +21,7 @@ public class FinalResultsController {
     @FXML
     private Label eyeColorResultLabel;
     
+   
     @FXML
     void showResults(ActionEvent event) {
     	// hair color
@@ -35,6 +36,9 @@ public class FinalResultsController {
     	
     	String lobe = BabyCalController.GetBabyLobe();
     	earLobeLabel.setText(lobe);
+    	
+    	String height = BabyCalController.GetBabyHeight();
+    	heightResultLabel.setText(height);
     	
     	
     	
