@@ -13,7 +13,7 @@ public class HairColor {
 	        	
 	         
 	         String predictHair() {
-	        	String bHair = "nothing";
+	        	String bHair = "";
 	        	
 	        	if (mHair.equals("brown") || fHair.equals("brown")) {
 	        		bHair = "brown";
