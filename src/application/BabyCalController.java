@@ -66,6 +66,7 @@ public class BabyCalController {
    static String  finalBabyEye = "";
    static String  finalBabyLobe = "";
    static String  finalBabyDimples = "";
+   static String finalBabyHeight = "";
     
     void displayResults(){
     	
@@ -96,7 +97,8 @@ public class BabyCalController {
     	//Height
     	float motherHeight = Integer.parseInt(motherHeightTextField.getText());
     	float fatherHeight = Integer.parseInt(fatherHeightTextField.getText());
-    	float babyHeight = calculateHeight(motherHeight, fatherHeight);
+    	String babyHeight = calculateHeight(motherHeight, fatherHeight);
+    	finalBabyHeight = babyHeight;
     
     }
     
@@ -114,6 +116,10 @@ public class BabyCalController {
     
     static String GetBabyDimples() {
     	return finalBabyDimples;
+    }
+    
+    static String GetBabyHeight() {
+    	return finalBabyHeight;
     }
     
     String calculateHair(String mHair, String fHair) {
@@ -144,10 +150,10 @@ public class BabyCalController {
 	   return dimResult;
    }
    
-   float calculateHeight(float mHeight, float fHeight) {
+   String calculateHeight(float mHeight, float fHeight) {
 	   
 	   Height babyHeight = new Height(mHeight, fHeight);
-	   float heightResult = babyHeight.predictHeight();
+	   String heightResult = babyHeight.predictHeight();
 	   return heightResult;
    }
 }
