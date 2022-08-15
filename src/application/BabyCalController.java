@@ -2,6 +2,8 @@ package application;
 
 
 
+import java.io.IOException;
+
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -84,6 +86,11 @@ public class BabyCalController {
     @FXML 
     private Label motherNameLabel;
     
+    @FXML
+    private Label heightErrorLabel;
+    
+    
+    
  
     
     
@@ -110,8 +117,10 @@ setNameLabel();
     }
     
     @FXML
-    void goToHomeScreen(ActionEvent event3) {
-    	
+    void goToHomeScreen(ActionEvent event3) throws IOException {
+    	VBox root = FXMLLoader.load( getClass().getResource("MainPageView.fxml"));
+    	Stage window = (Stage) finalCalculate.getScene().getWindow();
+    	window.setScene(new Scene(root, 300, 300));
     	
     }
     
@@ -162,11 +171,49 @@ setNameLabel();
     	finalBabyDimples = babyDim;
     	
     	//Height
-    	float motherHeight = Integer.parseInt(motherHeightTextField.getText());
-    	float fatherHeight = Integer.parseInt(fatherHeightTextField.getText());
-    	String babyHeight = calculateHeight(motherHeight, fatherHeight);
-    	finalBabyHeight = babyHeight;
-    
+    	float motherHeight = 0;
+    	float fatherHeight = 0;
+    	
+    	String motherHeightString = motherHeightTextField.getText();
+    	for(int i = 0; i < motherHeightString.length(); i++) {
+    		char letter = motherHeightString.charAt(i);
+    		// block for capital
+    		if ((int)letter >= 65 && (int)letter <= 90) {
+    			heightErrorLabel.setText("Do not use alphabets in height");
+    			motherHeight = 0;
+    			
+    		}
+    		if((int)letter >= 97 && (int)letter <= 122) {
+    			heightErrorLabel.setText("Do not use alphabests in height");
+    			motherHeight = 0;
+    		}
+    	}
+		if (motherHeight != 0) {
+			motherHeight = Integer.parseInt(motherHeightTextField.getText());
+		}
+		
+		String fatherHeightString = fatherHeightTextField.getText();
+    	for(int i = 0; i < fatherHeightString.length(); i++) {
+    		char letter = fatherHeightString.charAt(i);
+    		// block for capital
+    		if ((int)letter >= 65 && (int)letter <= 90) {
+    			heightErrorLabel.setText("Do not use alphabets in height");
+    			fatherHeight = 0;
+    			
+    		}
+    		if((int)letter >= 97 && (int)letter <= 122) {
+    			heightErrorLabel.setText("Do not use alphabests in height");
+    			fatherHeight = 0;
+    		}
+    	}
+		if (fatherHeight != 0) {
+			fatherHeight = Integer.parseInt(fatherHeightTextField.getText());
+		}
+    	
+		if (motherHeight != 0 && fatherHeight != 0) {
+			String babyHeight = calculateHeight(motherHeight, fatherHeight);
+			finalBabyHeight = babyHeight;
+		}
     }
     
     static String GetBabyHair() {
