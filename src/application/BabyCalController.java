@@ -84,6 +84,10 @@ public class BabyCalController {
     	String fatherDimples = fatherDimplesChoiceBox.getValue().toString();
     	String babyDim = calculateDimples(motherDimples, fatherDimples);
     	
+    	//Height
+    	float motherHeight = Integer.parseInt(motherHeightTextField.getText());
+    	float fatherHeight = Integer.parseInt(fatherHeightTextField.getText());
+    	float babyHeight = calculateHeight(motherHeight, fatherHeight);
     
     }
     
@@ -114,5 +118,11 @@ public class BabyCalController {
 	   String dimResult = babyDim.predictDimples();
 	   return dimResult;
    }
-    
+   
+   float calculateHeight(float mHeight, float fHeight) {
+	   
+	   Height babyHeight = new Height(mHeight, fHeight);
+	   float heightResult = babyHeight.predictHeight();
+	   return heightResult;
+   }
 }
