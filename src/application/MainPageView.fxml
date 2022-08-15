@@ -48,7 +48,7 @@
             <TextField fx:id="fatherNameTextField" />
          </children>
       </HBox>
-      <Button fx:id="addInfoButton" mnemonicParsing="false" onAction="#addInfo" text="Add information" textFill="#2d84c3">
+      <Button fx:id="addInfoButton" mnemonicParsing="false" onAction="#addInfo" text="START!" textFill="#2d84c3">
          <VBox.margin>
             <Insets left="170.0" />
          </VBox.margin>

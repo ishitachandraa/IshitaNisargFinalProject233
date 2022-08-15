@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.collections.*?>
 <?import javafx.scene.text.*?>
 <?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
@@ -12,7 +13,7 @@
    <children>
       <HBox prefHeight="100.0" prefWidth="200.0">
          <children>
-            <Label text="ENTER YOUR DETAILS!">
+            <Label text="Information regarding eye color, hair color, height, dimples and ear lobe structure would be required. Click on 'continue' else so back to home screen to try later!">
                <HBox.margin>
                   <Insets left="20.0" />
                </HBox.margin>
@@ -24,10 +25,16 @@
       </HBox>
       <HBox prefHeight="100.0" prefWidth="200.0">
          <children>
+            <Button fx:id="continueButton" mnemonicParsing="false" onAction="#addParentInformation" text="Continue" />
+            <Button fx:id="goBackButton" mnemonicParsing="false" onAction="#goToHomeScreen" text="Go Back" />
+         </children>
+      </HBox>
+      <HBox fx:id="hBox1" prefHeight="100.0" prefWidth="200.0" visible = "false">
+         <children>
             <Label text="                      " />
             <HBox prefHeight="77.0" prefWidth="550.0">
                <children>
-                  <Label prefHeight="35.0" prefWidth="236.0" text="Mother's Name">
+                  <Label fx:id="motherNameLabel" prefHeight="35.0" prefWidth="236.0" text="Mother's Name">
                      <HBox.margin>
                         <Insets left="170.0" />
                      </HBox.margin>
@@ -39,7 +46,7 @@
             </HBox>
             <HBox prefHeight="77.0" prefWidth="386.0">
                <children>
-                  <Label prefHeight="35.0" prefWidth="241.0" text="Father's Name">
+                  <Label fx:id="fatherNameLabel" prefHeight="35.0" prefWidth="241.0" text="Father's Name">
                      <font>
                         <Font name="System Bold Italic" size="24.0" />
                      </font></Label>
@@ -47,7 +54,7 @@
             </HBox>
          </children>
       </HBox>
-      <HBox prefHeight="100.0" prefWidth="200.0">
+      <HBox fx:id="hBox2" prefHeight="100.0" prefWidth="200.0" visible = "false">
          <children>
             <Label prefWidth="150.0" text=" EYE COLOR" textAlignment="CENTER" textFill="#0d8de2">
                <HBox.margin>
@@ -58,10 +65,10 @@
                </font></Label>
             <ChoiceBox fx:id="eyeColorMotherChoiceBox" prefWidth="150.0">
             	<items>
-            		<FXCollections fx:factory = "observableArrayList">
-            			<String fx:value = "brown" />
-            			<String fx:value = "blue" />
-            			<String fx:value = "Green" />
+            		<FXCollections fx:factory="observableArrayList">
+            			<String fx:value="brown" />
+            			<String fx:value="blue" />
+            			<String fx:value="Green" />
             	</FXCollections>
             </items>
                <HBox.margin>
@@ -70,10 +77,10 @@
             </ChoiceBox>
             <ChoiceBox fx:id="eyeColorFatherChoiceBox" prefWidth="150.0">
             <items>
-            		<FXCollections fx:factory = "observableArrayList">
-            			<String fx:value = "brown" />
-            			<String fx:value = "blue" />
-            			<String fx:value = "Green" />
+            		<FXCollections fx:factory="observableArrayList">
+            			<String fx:value="brown" />
+            			<String fx:value="blue" />
+            			<String fx:value="Green" />
             	</FXCollections>
             </items>
                <HBox.margin>
@@ -82,7 +89,7 @@
             </ChoiceBox>
          </children>
       </HBox>
-      <HBox prefHeight="100.0" prefWidth="200.0">
+      <HBox fx:id="hBox3" prefHeight="100.0" prefWidth="200.0" visible="false">
          <children>
             <Label prefWidth="150.0" text="HAIR COLOR" textAlignment="CENTER" textFill="#0d8de2">
                <HBox.margin>
@@ -93,11 +100,11 @@
                </font></Label>
             <ChoiceBox fx:id="motherHairColorChoiceBox" prefWidth="150.0">
             <items>
-            		<FXCollections fx:factory = "observableArrayList">
-            			<String fx:value = "brown" />
+            		<FXCollections fx:factory="observableArrayList">
+            			<String fx:value="brown" />
             			
-            			<String fx:value = "blonde" />
-            			<String fx:value = "red" />
+            			<String fx:value="blonde" />
+            			<String fx:value="red" />
             			
             	</FXCollections>
             </items>
@@ -106,11 +113,11 @@
                </HBox.margin></ChoiceBox>
             <ChoiceBox fx:id="fatherHairColorChoiceBox" prefWidth="150.0">
              <items>
-            		<FXCollections fx:factory = "observableArrayList">
-            			<String fx:value = "brown" />
+            		<FXCollections fx:factory="observableArrayList">
+            			<String fx:value="brown" />
             			
-            			<String fx:value = "blonde" />
-            			<String fx:value = "red" />
+            			<String fx:value="blonde" />
+            			<String fx:value="red" />
             			
             	</FXCollections>
             </items>
@@ -119,7 +126,7 @@
                </HBox.margin></ChoiceBox>
          </children>
       </HBox>
-      <HBox prefHeight="100.0" prefWidth="200.0">
+      <HBox fx:id="hBox4" prefHeight="100.0" prefWidth="200.0" visible="false">
          <children>
             <Label prefWidth="150.0" text="HEIGHT" textAlignment="CENTER" textFill="#0d8de2">
                <HBox.margin>
@@ -138,7 +145,7 @@
                </HBox.margin></TextField>
          </children>
       </HBox>
-      <HBox prefHeight="100.0" prefWidth="200.0">
+      <HBox fx:id="hBox5" prefHeight="100.0" prefWidth="200.0" visible="false">
          <children>
             <Label prefWidth="150.0" text="DIMPLES" textAlignment="CENTER" textFill="#0d8de2">
                <HBox.margin>
@@ -149,9 +156,9 @@
                </font></Label>
             <ChoiceBox fx:id="motherDimplesChoiceBox" prefWidth="150.0">
              <items>
-            		<FXCollections fx:factory = "observableArrayList">
-            			<String fx:value = "Dimples" />
-            			<String fx:value = "No Dimples" />
+            		<FXCollections fx:factory="observableArrayList">
+            			<String fx:value="Dimples" />
+            			<String fx:value="No Dimples" />
             	</FXCollections>
             </items>
                <HBox.margin>
@@ -159,9 +166,9 @@
                </HBox.margin></ChoiceBox>
             <ChoiceBox fx:id="fatherDimplesChoiceBox" prefWidth="150.0">
              <items>
-            		<FXCollections fx:factory = "observableArrayList">
-            			<String fx:value = "Dimples" />
-            			<String fx:value = "No Dimples" />
+            		<FXCollections fx:factory="observableArrayList">
+            			<String fx:value="Dimples" />
+            			<String fx:value="No Dimples" />
             	</FXCollections>
             </items>
                <HBox.margin>
@@ -169,7 +176,7 @@
                </HBox.margin></ChoiceBox>
          </children>
       </HBox>
-      <HBox prefHeight="100.0" prefWidth="200.0">
+      <HBox fx:id="hBox6" prefHeight="100.0" prefWidth="200.0" visible="false">
          <children>
             <Label prefWidth="150.0" text="EAR LOBE" textAlignment="CENTER" textFill="#0d8de2">
                <HBox.margin>
@@ -180,9 +187,9 @@
                </font></Label>
             <ChoiceBox fx:id="motherEarLobeChoiceBox" prefWidth="150.0">
              <items>
-            		<FXCollections fx:factory = "observableArrayList">
-            			<String fx:value = "Attached Earlobe" />
-            			<String fx:value = "Dettached Earlobe" />
+            		<FXCollections fx:factory="observableArrayList">
+            			<String fx:value="Attached Earlobe" />
+            			<String fx:value="Dettached Earlobe" />
             	</FXCollections>
             </items>
                <HBox.margin>
@@ -190,9 +197,9 @@
                </HBox.margin></ChoiceBox>
             <ChoiceBox fx:id="fatherEarLobeChoiceBox" prefWidth="150.0">
              <items>
-            		<FXCollections fx:factory = "observableArrayList">
-            			<String fx:value = "Attached Earlobe" />
-            			<String fx:value = "Dettached Earlobe" />
+            		<FXCollections fx:factory="observableArrayList">
+            			<String fx:value="Attached Earlobe" />
+            			<String fx:value="Dettached Earlobe" />
             	</FXCollections>
             </items>
                <HBox.margin>
@@ -200,9 +207,10 @@
                </HBox.margin></ChoiceBox>
          </children>
       </HBox>
-      <Button fx:id="finalCalculate" mnemonicParsing="false" onAction="#calculateBaby" prefHeight="20.0" prefWidth="200.0" text="Calculate">
-         <VBox.margin>
-            <Insets bottom="10.0" left="270.0" />
-         </VBox.margin></Button>
+      <HBox fx:id="hBox7" prefHeight="100.0" prefWidth="200.0" visible="false">
+         <children>
+            <Button fx:id="finalCalculate" mnemonicParsing="false" onAction="#calculateBaby" prefHeight="20.0" prefWidth="200.0" text="Calculate" />
+         </children>
+      </HBox>
    </children>
 </VBox>

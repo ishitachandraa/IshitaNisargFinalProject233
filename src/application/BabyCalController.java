@@ -8,7 +8,9 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
@@ -26,6 +28,13 @@ public class BabyCalController {
 
     @FXML
     private Button finalCalculate;
+    
+    @FXML
+    private Button continueButton;
+    
+    @FXML
+    private Button goBackButton;
+    
 
     @FXML
     private ChoiceBox<String> eyeColorFatherChoiceBox;
@@ -47,7 +56,65 @@ public class BabyCalController {
 
     @FXML
     private ChoiceBox<String> eyeColorMotherChoiceBox;
-
+    
+    @FXML
+    private HBox hBox1;
+    
+    @FXML
+    private HBox hBox2;
+    
+    @FXML
+    private HBox hBox3;
+    
+    @FXML
+    private HBox hBox4;
+    
+    @FXML
+    private HBox hBox5;
+    
+    @FXML
+    private HBox hBox6;
+    
+    @FXML
+    private HBox hBox7;
+    
+    @FXML 
+    private Label fatherNameLabel;
+    
+    @FXML 
+    private Label motherNameLabel;
+    
+ 
+    
+    
+    @FXML
+    void addParentInformation(ActionEvent event2) {
+    	
+    	hBox1.setVisible(true);
+    	hBox2.setVisible(true);
+    	hBox3.setVisible(true);
+    	hBox4.setVisible(true);
+    	hBox5.setVisible(true);
+    	hBox6.setVisible(true);
+    	hBox7.setVisible(true);
+setNameLabel();    	
+    }
+    
+    void setNameLabel() {
+    	String fatherName = BabyFeatureController.fName;
+    	fatherNameLabel.setText(fatherName);
+    	
+    	String motherName = BabyFeatureController.mName;
+    	motherNameLabel.setText(motherName);
+    	
+    }
+    
+    @FXML
+    void goToHomeScreen(ActionEvent event3) {
+    	
+    	
+    }
+    
     
     
     // got this code from https://youtu.be/qnwBZveyUtA

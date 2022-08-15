@@ -23,12 +23,21 @@ public class BabyFeatureController {
 
     @FXML
     private Button addInfoButton;
-
+    
+    static String mName = "";
+    static String fName = "";
+  
    
     @FXML
     void addInfo(ActionEvent event)throws IOException {
-    	String motherName = motherNameTextField.getText();
+        String motherName = motherNameTextField.getText();
     	String fatherName = fatherNameTextField.getText();
+    	
+    	mName = motherName;
+    	fName = fatherName;
+    
+    	
+    	
     	
     	FXMLLoader loader = new FXMLLoader();
     	VBox root = loader.load(new FileInputStream("src/application/ParentsInfo.fxml"));
@@ -38,8 +47,12 @@ public class BabyFeatureController {
     	
     	
     	
+    	
+    	}
+    
+   
     }
 
   
 
-}
+
