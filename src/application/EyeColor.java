@@ -12,16 +12,16 @@ public class EyeColor {
 
 	String predictEye() {
 		String bEye = "";
-		if(mEye.equals("brown")|| fEye.equals("brown")) {
-    		bEye = "brown";
-    		if(mEye.equals("blue")|| fEye.equals("blue"))
-    			bEye = "brown or blue";
+		if(mEye.equals("Brown")|| fEye.equals("Brown")) {
+    		bEye = "Brown";
+    		if(mEye.equals("Blue")|| fEye.equals("Blue"))
+    			bEye = "Brown or Blue";
     	}
 		
 		if(mEye.equals(fEye)) {
 			bEye=mEye;
 		}
-		if((mEye.equals("blue")&& fEye.equals("green"))||(fEye.equals("blue")&& mEye.equals("green"))) {
+		if((mEye.equals("Blue")&& fEye.equals("Green"))||(fEye.equals("Blue")&& mEye.equals("Green"))) {
 			bEye="Blue or Green";
 		}
 		
