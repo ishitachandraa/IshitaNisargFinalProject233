@@ -171,8 +171,9 @@ setNameLabel();
     	finalBabyDimples = babyDim;
     	
     	//Height
-    	float motherHeight = Integer.parseInt(motherHeightTextField.getText());
-    	float fatherHeight = Integer.parseInt(fatherHeightTextField.getText());
+    	String motherHeight = motherHeightTextField.getText();
+    	String fatherHeight = fatherHeightTextField.getText();
+    	
 		String babyHeight = calculateHeight(motherHeight, fatherHeight);
 		finalBabyHeight = babyHeight;
 		}
@@ -226,7 +227,7 @@ setNameLabel();
 	   return dimResult;
    }
    
-   String calculateHeight(float mHeight, float fHeight) {
+   String calculateHeight(String mHeight, String fHeight) {
 	   
 	   Height babyHeight = new Height(mHeight, fHeight);
 	   String heightResult = babyHeight.predictHeight();
