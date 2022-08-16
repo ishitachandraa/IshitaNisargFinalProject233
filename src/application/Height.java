@@ -1,22 +1,39 @@
 package application;
 
 public class Height {
-	float mHeight;
-	float fHeight;
+	String mHeight;
+	String fHeight;
 	
 	
-	Height(float motherHeight, float fatherHeight){
+	
+	Height(String motherHeight, String fatherHeight){
 		mHeight = motherHeight;
 		fHeight = fatherHeight;
 	}
 	String predictHeight() {
-		float bHeight = 0.0f;
-		float childHeight = (mHeight + fHeight)/2;
-		bHeight = childHeight;
-        String babyHeight = String.valueOf(bHeight);		
+		String bHeight = "";
+		boolean valueOkay = true;
+		
+		int i = 0;
+		while (i<mHeight.length()) {
+			char letter = mHeight.charAt(i);
+			if (!Character.isDigit(letter)){
+				valueOkay = false;
+			}
+			
+		}
+		if (valueOkay){
+		int mInt = Integer.parseInt(mHeight);
+		int fInt = Integer.parseInt(fHeight);
+		int bInt = (mInt + fInt)/2;
+		bHeight = String.valueOf(bInt);
+		}
+		else {
+			bHeight = "0";
+		}
 		
 		
-		return babyHeight;
+		return bHeight;
 		
 	}
 		
