@@ -15,14 +15,14 @@ public class HairColor {
 	         String predictHair() {
 	        	String bHair = "";
 	        	
-	        	if (mHair.equals("brown") || fHair.equals("brown")) {
-	        		bHair = "brown";
+	        	if (mHair.equals("Brown") || fHair.equals("Brown")) {
+	        		bHair = "Brown";
 	        	}else {
-	        		if(mHair.equals("blonde")|| fHair.equals("blonde")) {
-	        			bHair = "blonde";
+	        		if(mHair.equals("Blonde")|| fHair.equals("Blonde")) {
+	        			bHair = "Blonde";
 	        		}
 	        		else {
-	        			bHair = "red";
+	        			bHair = "Red";
 	        		}
 	        	}
 	        	

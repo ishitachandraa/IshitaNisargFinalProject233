@@ -95,8 +95,8 @@
             <ChoiceBox fx:id="eyeColorMotherChoiceBox" prefWidth="150.0">
             	<items>
             		<FXCollections fx:factory="observableArrayList">
-            			<String fx:value="brown" />
-            			<String fx:value="blue" />
+            			<String fx:value="Brown" />
+            			<String fx:value="Blue" />
             			<String fx:value="Green" />
             	</FXCollections>
             </items>
@@ -107,8 +107,8 @@
             <ChoiceBox fx:id="eyeColorFatherChoiceBox" prefWidth="150.0">
             <items>
             		<FXCollections fx:factory="observableArrayList">
-            			<String fx:value="brown" />
-            			<String fx:value="blue" />
+            			<String fx:value="Brown" />
+            			<String fx:value="Blue" />
             			<String fx:value="Green" />
             	</FXCollections>
             </items>
@@ -130,10 +130,10 @@
             <ChoiceBox fx:id="motherHairColorChoiceBox" prefWidth="150.0">
             <items>
             		<FXCollections fx:factory="observableArrayList">
-            			<String fx:value="brown" />
+            			<String fx:value="Brown" />
             			
-            			<String fx:value="blonde" />
-            			<String fx:value="red" />
+            			<String fx:value="Blonde" />
+            			<String fx:value="Red" />
             			
             	</FXCollections>
             </items>
@@ -143,10 +143,10 @@
             <ChoiceBox fx:id="fatherHairColorChoiceBox" prefWidth="150.0">
              <items>
             		<FXCollections fx:factory="observableArrayList">
-            			<String fx:value="brown" />
+            			<String fx:value="Brown" />
             			
-            			<String fx:value="blonde" />
-            			<String fx:value="red" />
+            			<String fx:value="Blonde" />
+            			<String fx:value="Red" />
             			
             	</FXCollections>
             </items>
