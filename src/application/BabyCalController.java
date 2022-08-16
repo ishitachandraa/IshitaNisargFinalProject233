@@ -171,50 +171,12 @@ setNameLabel();
     	finalBabyDimples = babyDim;
     	
     	//Height
-    	float motherHeight = 0;
-    	float fatherHeight = 0;
-    	
-    	String motherHeightString = motherHeightTextField.getText();
-    	for(int i = 0; i < motherHeightString.length(); i++) {
-    		char letter = motherHeightString.charAt(i);
-    		// block for capital
-    		if ((int)letter >= 65 && (int)letter <= 90) {
-    			heightErrorLabel.setText("Do not use alphabets in height");
-    			motherHeight = 0;
-    			
-    		}
-    		if((int)letter >= 97 && (int)letter <= 122) {
-    			heightErrorLabel.setText("Do not use alphabests in height");
-    			motherHeight = 0;
-    		}
-    	}
-		if (motherHeight != 0) {
-			motherHeight = Integer.parseInt(motherHeightTextField.getText());
+    	float motherHeight = Integer.parseInt(motherHeightTextField.getText());
+    	float fatherHeight = Integer.parseInt(fatherHeightTextField.getText());
+		String babyHeight = calculateHeight(motherHeight, fatherHeight);
+		finalBabyHeight = babyHeight;
 		}
-		
-		String fatherHeightString = fatherHeightTextField.getText();
-    	for(int i = 0; i < fatherHeightString.length(); i++) {
-    		char letter = fatherHeightString.charAt(i);
-    		// block for capital
-    		if ((int)letter >= 65 && (int)letter <= 90) {
-    			heightErrorLabel.setText("Do not use alphabets in height");
-    			fatherHeight = 0;
-    			
-    		}
-    		if((int)letter >= 97 && (int)letter <= 122) {
-    			heightErrorLabel.setText("Do not use alphabests in height");
-    			fatherHeight = 0;
-    		}
-    	}
-		if (fatherHeight != 0) {
-			fatherHeight = Integer.parseInt(fatherHeightTextField.getText());
-		}
-    	
-		if (motherHeight != 0 && fatherHeight != 0) {
-			String babyHeight = calculateHeight(motherHeight, fatherHeight);
-			finalBabyHeight = babyHeight;
-		}
-    }
+    
     
     static String GetBabyHair() {
     	return finalBabyHair;
