@@ -16,7 +16,7 @@ import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
-public class BabyCalController {
+public class BabyCalController  {
 	Stage applicationStage;
 	
     @FXML
@@ -130,12 +130,16 @@ setNameLabel();
     @FXML
     void calculateBaby(ActionEvent event)throws Exception {
     	
+    	displayResults();
+    	if (heightErrorMessage!="") {
+    	heightErrorLabel.setText(heightErrorMessage);
     	
-    	VBox root = FXMLLoader.load( getClass().getResource("BabyFeatures.fxml"));
-    	Stage window = (Stage) finalCalculate.getScene().getWindow();
-    	window.setScene(new Scene(root, 300, 300));
-        displayResults();
-    	
+    	}
+    	else {
+        	VBox root = FXMLLoader.load( getClass().getResource("BabyFeatures.fxml"));
+        	Stage window = (Stage) finalCalculate.getScene().getWindow();
+        	window.setScene(new Scene(root, 300, 300));
+    	}
     }
     
    static String  finalBabyHair = "";
@@ -143,6 +147,7 @@ setNameLabel();
    static String  finalBabyLobe = "";
    static String  finalBabyDimples = "";
    static String finalBabyHeight = "";
+    String heightErrorMessage = "";
     
     void displayResults(){
     	
@@ -176,6 +181,8 @@ setNameLabel();
     	
 		String babyHeight = calculateHeight(motherHeight, fatherHeight);
 		finalBabyHeight = babyHeight;
+		
+		
 		}
     
     
@@ -231,6 +238,7 @@ setNameLabel();
 	   
 	   Height babyHeight = new Height(mHeight, fHeight);
 	   String heightResult = babyHeight.predictHeight();
+	  heightErrorMessage = babyHeight.errorMessage();
 	   return heightResult;
    }
 }
