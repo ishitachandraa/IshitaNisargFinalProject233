@@ -2,10 +2,12 @@ package application;
 
 public class EarLobe {
 
-	// if lobe attached then true
-	Boolean mLobe=false;
-	Boolean fLobe=true;
 	
+	Boolean mLobe=false;
+	Boolean fLobe=false;
+	
+	
+	// constructor (if ear lobes attached, then boolean is true)
 	EarLobe(String motherLobe, String fatherLobe){
 		if(motherLobe.equals("Attached Earlobe")) {
 			mLobe=true;
@@ -15,6 +17,7 @@ public class EarLobe {
 		}
 	}
 		
+	// returns baby's ear lobe shape according to the same of parents.
 		String predictEarlobe() {
 			String bLobe = "";
 			
