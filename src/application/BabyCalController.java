@@ -127,8 +127,8 @@ public class BabyCalController  {
     // 'go back' button takes user to home screen
     void goToHomeScreen(ActionEvent event3) throws IOException {
     	VBox root = FXMLLoader.load( getClass().getResource("MainPageView.fxml"));
-    	Stage window = (Stage) finalCalculate.getScene().getWindow();
-    	window.setScene(new Scene(root, 300, 300));
+    	Stage window = (Stage)  goBackButton.getScene().getWindow();
+    	window.setScene(new Scene(root, 500, 350));
     	
     }
     

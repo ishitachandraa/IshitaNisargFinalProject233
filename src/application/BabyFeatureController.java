@@ -1,11 +1,12 @@
 package application;
 
-import java.io.FileInputStream;
+
 import java.io.IOException;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
@@ -39,16 +40,13 @@ public class BabyFeatureController {
     	fName = fatherName;
    
     	// creates and opens scene 2
-    	FXMLLoader loader = new FXMLLoader();
-    	VBox root = loader.load(new FileInputStream("src/application/ParentsInfo.fxml"));
-    	Scene scene2 = new Scene(root,600,550);
-    	applicationStage.setScene(scene2);
+    	VBox root = FXMLLoader.load(getClass().getResource("ParentsInfo.fxml"));
+    	applicationStage = (Stage)((Node)event.getSource()).getScene().getWindow();
+    	Scene Scene2 = new Scene(root,600,550);
+    	applicationStage.setScene(Scene2);
+    	applicationStage.show();
     	
-    	
-    	
-    	
-    	}
-    
+    	} 
    
     }
 
