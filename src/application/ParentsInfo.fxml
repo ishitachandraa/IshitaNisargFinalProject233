@@ -174,7 +174,13 @@
                </HBox.margin></TextField>
          </children>
       </HBox>
-      <Label fx:id="heightErrorLabel" prefHeight="17.0" prefWidth="74.0" />
+      <Label fx:id="heightErrorLabel" prefHeight="32.0" prefWidth="558.0" textFill="#c33535" >
+         <font>
+            <Font name="Bookman Old Style" size="17.0" />
+         </font>
+         <padding>
+            <Insets bottom="15.0" left="10.0" />
+         </padding></Label>
       <HBox fx:id="hBox5" prefHeight="100.0" prefWidth="200.0" visible="false">
          <children>
             <Label prefWidth="150.0" text="DIMPLES" textAlignment="CENTER" textFill="#0d8de2">
