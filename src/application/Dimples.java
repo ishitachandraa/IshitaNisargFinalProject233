@@ -5,6 +5,7 @@ public class Dimples {
 	Boolean mDim=false;
 	Boolean fDim=false;
 	
+	// Constructor which assigns 'true' if dimple present
 	Dimples(String motherDimples, String fatherDimples){
 		if(motherDimples.equals("Dimples")) {
 			mDim=true;
@@ -14,6 +15,7 @@ public class Dimples {
 		}
 	}
 	
+	// returns the occurrence of dimples in child on the basis of dimples of the parents.
 	String predictDimples() {
 		String bDim = "";
 		
@@ -26,8 +28,6 @@ public class Dimples {
 		else {
 			bDim = "No Dimples";
 		}
-		
-		
 		
 		return bDim;
 

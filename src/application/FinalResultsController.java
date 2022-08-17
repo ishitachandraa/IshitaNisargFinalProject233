@@ -24,8 +24,10 @@ public class FinalResultsController {
    
    
     @FXML
+    // gets variables from the previous scene controller(BabyCalController)
+    // and puts it into the labels in the final scene.
     void showResults(ActionEvent event) {
-    	// hair color
+    	
     	String hairColor = BabyCalController.GetBabyHair();
     	hairColorResultLabel.setText(hairColor);
     	

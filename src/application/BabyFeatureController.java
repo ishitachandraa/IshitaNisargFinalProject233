@@ -29,19 +29,18 @@ public class BabyFeatureController {
   
    
     @FXML
+    // executes when START! button is pressed
     void addInfo(ActionEvent event)throws IOException {
+    	// stores data from the two text fields in variables for future use
         String motherName = motherNameTextField.getText();
     	String fatherName = fatherNameTextField.getText();
     	
     	mName = motherName;
     	fName = fatherName;
-    
-    	
-    	
-    	
+   
+    	// creates and opens scene 2
     	FXMLLoader loader = new FXMLLoader();
     	VBox root = loader.load(new FileInputStream("src/application/ParentsInfo.fxml"));
-    	
     	Scene scene2 = new Scene(root,600,550);
     	applicationStage.setScene(scene2);
     	

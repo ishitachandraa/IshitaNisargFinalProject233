@@ -5,11 +5,13 @@ public class EyeColor {
 	String mEye;
 	String fEye;
 	
+	// constructor
 	EyeColor(String motherEye, String fatherEye){
 		mEye = motherEye;
 		fEye = fatherEye;
 	}
 
+	// returns baby eye color based on parent's eye colors
 	String predictEye() {
 		String bEye = "";
 		if(mEye.equals("Brown")|| fEye.equals("Brown")) {
