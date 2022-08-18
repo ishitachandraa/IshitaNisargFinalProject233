@@ -5,14 +5,30 @@ import java.util.ArrayList;
 
 public class Height {
 	
-	String mHeight;
-	String fHeight;
-    ArrayList<Character> badChar = new ArrayList<Character>();
+	private String mHeight;
+	private String fHeight;
+    private String getmHeight() {
+		return mHeight;
+	}
+
+	private void setmHeight(String mHeight) {
+		this.mHeight = mHeight;
+	}
+
+	private String getfHeight() {
+		return fHeight;
+	}
+
+	private void setfHeight(String fHeight) {
+		this.fHeight = fHeight;
+	}
+
+	ArrayList<Character> badChar = new ArrayList<Character>();
 
     // constructor
 	Height(String motherHeight, String fatherHeight){
-		mHeight = motherHeight;
-		fHeight = fatherHeight;
+		setmHeight(motherHeight);
+		setfHeight(fatherHeight);
 	}
 	
 	// predicts baby height based on parent heights

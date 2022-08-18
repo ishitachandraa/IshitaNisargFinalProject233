@@ -2,13 +2,29 @@ package application;
 
 public class EyeColor {
 	
-	String mEye;
-	String fEye;
+	private String mEye;
+	private String fEye;
 	
+	private String getmEye() {
+		return mEye;
+	}
+
+	private void setmEye(String mEye) {
+		this.mEye = mEye;
+	}
+
+	private String getfEye() {
+		return fEye;
+	}
+
+	private void setfEye(String fEye) {
+		this.fEye = fEye;
+	}
+
 	// constructor
 	EyeColor(String motherEye, String fatherEye){
-		mEye = motherEye;
-		fEye = fatherEye;
+		setmEye(motherEye);
+		setfEye(fatherEye);
 	}
 
 	// returns baby eye color based on parent's eye colors
