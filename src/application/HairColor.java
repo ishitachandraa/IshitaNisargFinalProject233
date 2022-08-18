@@ -2,14 +2,32 @@ package application;
 
 public class HairColor {  
 	
-	 String mHair;
-	 String fHair;
-	         
+	 private String mHair;
+	 private String fHair;
+	 
+	 private String getmHair() {
+		return mHair;
+	}
+
+	private void setmHair(String mHair) {
+		this.mHair = mHair;
+	}
+
+	private String getfHair() {
+		return fHair;
+	}
+
+	private void setfHair(String fHair) {
+		this.fHair = fHair;
+	}
+
+	 
+         
 	        
 	    // constructor
 	 HairColor( String motherHair, String fatherHair){
-	        mHair = motherHair;
-	        fHair = fatherHair;
+	        setmHair(motherHair);
+	        setfHair(fatherHair);
 	         }
 	        	
 	     // returns baby hair color based on the same of parents    

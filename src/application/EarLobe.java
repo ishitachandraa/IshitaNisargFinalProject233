@@ -3,17 +3,33 @@ package application;
 public class EarLobe {
 
 	
-	Boolean mLobe=false;
-	Boolean fLobe=false;
+	private Boolean mLobe=false;
+	private Boolean fLobe=false;
 	
 	
+	private Boolean getmLobe() {
+		return mLobe;
+	}
+
+	private void setmLobe(Boolean mLobe) {
+		this.mLobe = mLobe;
+	}
+
+	private Boolean getfLobe() {
+		return fLobe;
+	}
+
+	private void setfLobe(Boolean fLobe) {
+		this.fLobe = fLobe;
+	}
+
 	// constructor (if ear lobes attached, then boolean is true)
 	EarLobe(String motherLobe, String fatherLobe){
 		if(motherLobe.equals("Attached Earlobe")) {
-			mLobe=true;
+			setmLobe(true);
 		}
 		if(fatherLobe.equals("Attached Earlobe")) {
-			fLobe=true;
+			setfLobe(true);
 		}
 	}
 		

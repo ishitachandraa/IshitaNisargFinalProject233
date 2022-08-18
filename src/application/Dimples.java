@@ -2,16 +2,34 @@ package application;
 
 public class Dimples {
 	
-	Boolean mDim=false;
-	Boolean fDim=false;
+	private Boolean mDim=false;
+	private Boolean fDim=false;
 	
+	
+	
+	private Boolean getmDim() {
+		return mDim;
+	}
+
+	private void setmDim(Boolean mDim) {
+		this.mDim = mDim;
+	}
+
+	private Boolean getfDim() {
+		return fDim;
+	}
+
+	private void setfDim(Boolean fDim) {
+		this.fDim = fDim;
+	}
+
 	// Constructor which assigns 'true' if dimple present
 	Dimples(String motherDimples, String fatherDimples){
 		if(motherDimples.equals("Dimples")) {
-			mDim=true;
+			setmDim(true);
 		}
 		if(fatherDimples.equals("Dimples")) {
-			fDim=true;
+			setfDim(true);
 		}
 	}
 	
